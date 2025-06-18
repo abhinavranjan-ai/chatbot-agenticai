@@ -6,8 +6,8 @@ class Config:
         self.config=ConfigParser()
         current_dir = os.path.dirname(os.path.abspath(__file__))
         confile_file_path = os.path.join(current_dir, "uiconfigs.ini")
-        self.config.read(config_file)
-        print("Config file path is: ", config_file)
+        self.config.read(confile_file_path)
+        print("Config file path is: ", confile_file_path)
 
     def get_llm_options(self):
         return self.config["DEFAULT"].get("LLM_OPTIONS").split(", ")
