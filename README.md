@@ -1,5 +1,5 @@
 ---
-title: LanggraphAgenticAI
+title: Basic Agentic Chatbot
 emoji: 🐨
 colorFrom: blue	
 colorTo: red
