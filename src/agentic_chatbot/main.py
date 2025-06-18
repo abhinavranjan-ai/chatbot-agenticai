@@ -1,5 +1,8 @@
 import streamlit as st
 from src.agentic_chatbot.ui.stramlit.loadui import LoadStreamlitUI
+from src.agentic_chatbot.llms.llm import LLM
+from src.agentic_chatbot.graph.graph_builder import GraphBuilder
+from src.agentic_chatbot.ui.stramlit.display_result import DisplayResult
 
 # Main Function starts
 def load_agentic_chatbot_app():
@@ -16,3 +19,24 @@ def load_agentic_chatbot_app():
     user_input = ui.load_streamlit_ui()
 
     user_message = st.chat_input("Enter your message: ")
+
+    if user_message:
+        try:
+            ## Configure LLM
+            obj_llm_config = LLM(user_input)
+            model = obj_llm_config.get_llm_model()
+
+            if not model:
+                st.error("Error: LLM model could not be initialized")
+
+            # Graph Builder
+            graph_builder = GraphBuilder(model)
+            try:
+                graph = graph_builder.setup_graph()
+                DisplayResult(graph, user_message).display_result_on_ui()
+
+            except Exception as e:
+                st.error(f"Error: Graph set up failed with Exception: {e}")
+
+        except Exception as e:
+            raise ValueError(f"Error: Error occured with Exception: {e}")

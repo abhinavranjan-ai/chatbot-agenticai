@@ -59,5 +59,4 @@ Bot: The weather in Paris is sunny. Reminder set for tomorrow.
 - Modify the agent's reasoning logic using LangChain's agent framework.
 
 
-> **Note:** If you find this project helpful, feel free to [follow me on LinkedIn](https://www.linkedin.com/in/abhinav-ranjan-6a25761aa/)!
-    ```
+> **Note:** If you find this project helpful, feel free to [follow me on LinkedIn](https://www.linkedin.com/in/abhinav-ranjan-ai/)!
