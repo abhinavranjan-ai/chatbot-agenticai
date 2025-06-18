@@ -1,3 +1,16 @@
+---
+title: LanggraphAgenticAI
+emoji: 🐨
+colorFrom: blue	
+colorTo: red
+sdk: streamlit
+sdk_version: 1.42.0
+app_file: app.py	
+pinned: false	
+license: apache-2.0
+short_description: Refined langgraphAgenticAI
+---
+
 # Agentic Chatbot with LangGraph, LangChain, and Python
 
 This project demonstrates how to build an **agentic chatbot** using [LangGraph](https://github.com/langchain-ai/langgraph), [LangChain](https://github.com/langchain-ai/langchain), and Python. The chatbot leverages agentic workflows to handle complex, multi-step conversations with users.
